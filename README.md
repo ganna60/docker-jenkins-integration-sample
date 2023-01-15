@@ -20,5 +20,6 @@ https://github.com/ganna60/docker-jenkins-integration-example.git
 ###### git branch -M master
 ###### git push -u origin master
 
+###### https://hub.docker.com/repositories/docker0407 docker0407/docker123
 
 
