@@ -7,12 +7,30 @@
     <groupId>com.javatechie</groupId>
     <artifactId>docker-jenkins-integration-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
-<build>
-    <finalName>docker-jenkins-integration-sample</finalName>
-</build>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <start-class>Test</start-class>
     </properties>
+
+    <build>
+        <finalName>docker-jenkins-integration-sample</finalName>
+        <plugins>
+            <plugin>
+                <!-- Build an executable JAR -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>Test</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
